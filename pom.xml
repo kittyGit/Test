@@ -45,6 +45,25 @@
 					<encoding>${project.build.sourceEncoding}</encoding>
 				</configuration>
 			</plugin>
+			<!-- Plugin required to build java classes from XSD using XJC -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jaxb2-maven-plugin</artifactId>
+				<version>1.6</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>xjc</goal>
+						</goals>
+						<phase>clean</phase>
+					</execution>
+
+				</executions>
+				<configuration>
+					<schemaFiles>Kitty.xsd</schemaFiles>
+					<packageName>com.example.foo</packageName>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 </project>

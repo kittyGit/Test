@@ -1,5 +1,7 @@
+package cn.req;
 public class Kitty {
 
+	
 	private String name;
 
 	private String age;

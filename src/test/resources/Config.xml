@@ -4,5 +4,9 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
+<bean name="Kitty" class="cn.req.Kitty"> 
+<property name="name" value="mign"></property>
+<property name="age" value="2"></property>
+</bean>
 
 </beans>

@@ -10,21 +10,12 @@ import java.util.Map;
 public class Grouping {
 
 	public static Map<String, List<Person>> groupByNationality7(List<Person> people) {
-        Map<String, List<Person>> map = new HashMap<>();
-        for (Person person : people) {
-            if (!map.containsKey(person.getNationality())) {
-                map.put(person.getNationality(), new ArrayList<>());
-            }
-            map.get(person.getNationality()).add(person);
-        }
-        return map;
+		return null;
     }
 
 	public static Map<String, List<Person>> groupByNationality(
 			List<Person> people) {
-		 return people.stream() // Convert collection to Stream
-		 .collect(groupingBy(Person::getNationality)); 
-		 // Group people bynationality
+		return null;
 	}
 
 }
