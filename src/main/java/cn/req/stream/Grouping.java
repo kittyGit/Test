@@ -1,7 +1,5 @@
 package cn.req.stream;
 
-import static java.util.stream.Collectors.groupingBy;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -10,7 +8,13 @@ import java.util.Map;
 public class Grouping {
 
 	public static Map<String, List<Person>> groupByNationality7(List<Person> people) {
-		return null;
+		Map<String,List<Person>> peoples=new HashMap<String, List<Person>>();
+	
+		
+		people.forEach(peo->{
+			
+		});
+		return peoples;
     }
 
 	public static Map<String, List<Person>> groupByNationality(
@@ -19,3 +23,5 @@ public class Grouping {
 	}
 
 }
+
+

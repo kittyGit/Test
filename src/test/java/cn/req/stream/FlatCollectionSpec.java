@@ -9,7 +9,7 @@ import static java.util.Arrays.asList;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /*
-Flatten multidimensional collection
+Flatten multi dimensional collection
  */
 public class FlatCollectionSpec {
 

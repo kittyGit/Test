@@ -1,18 +1,29 @@
 package cn.req.stream;
 
-import static java.util.stream.Collectors.toList;
-
+import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class FilterCollection {
 
 	public static List<String> transform7(List<String> collection) {
-		return null;
+		
+		List<String> names=new ArrayList<>();
+		collection.forEach(coll->{
+			if(coll.length()<4){
+				names.add(coll);
+			}
+		});
+		
+		return names;
 	}
 
 	public static List<String> transform(List<String> collection) {
-		return collection.stream().filter(e -> e.length() < 4)
-				.collect(toList());
+		
+		Predicate<String> p = name -> name.length() < 4;
+		
+		return collection.stream().filter(p).collect(Collectors.toList());
 	}
 
 }

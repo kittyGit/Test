@@ -20,7 +20,7 @@ public class KidsSpec {
         Person eva = new Person("Eva", 42);
         Person anna = new Person("Anna", 5);
         List<Person> collection = asList(sara, eva, viktor, anna);
-        assertThat(getKidNames7(collection))
+        assertThat(getKidNames(collection))
                 .contains("Sara", "Anna")
                 .doesNotContain("Viktor", "Eva");
     }

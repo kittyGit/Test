@@ -17,7 +17,7 @@ public class FilterCollectionSpec {
     public void transformShouldFilterCollection() {
         List<String> collection = asList("My", "name", "is", "John", "Doe");
         List<String> expected = asList("My", "is", "Doe");
-        assertThat(transform7(collection)).hasSameElementsAs(expected);
+        assertThat(transform(collection)).hasSameElementsAs(expected);
     }
 
 }

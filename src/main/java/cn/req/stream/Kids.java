@@ -1,17 +1,28 @@
 package cn.req.stream;
 
-import java.util.*;
-
-import static java.util.stream.Collectors.toSet;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public class Kids {
 
     public static Set<String> getKidNames7(List<Person> people) {
-    	return null;
+    	Set<String> kidNames=new HashSet<String>();
+    	people.forEach(peo->{
+    		if(peo.getAge()<18){
+    		String name=peo.getName();
+    		kidNames.add(name);
+    		}
+    	});
+    	return kidNames;
     }
 
     public static Set<String> getKidNames(List<Person> people) {
-    	return null;
+    	
+    	return people.stream().filter(peo -> peo.getAge()<18).map(peo -> peo.getName()).collect(Collectors.toSet());
+    	
+    	
     }
 
 }

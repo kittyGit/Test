@@ -19,10 +19,11 @@ public class PartitioningSpec {
         Person sara = new Person("Sara", 4);
         Person viktor = new Person("Viktor", 40);
         Person eva = new Person("Eva", 42);
-        List<Person> collection = asList(sara, eva, viktor);
+        Person jack = new Person("Viktor", 5);
+        List<Person> collection = asList(sara, eva, viktor, jack);
         Map<Boolean, List<Person>> result = partitionAdults7(collection);
         assertThat(result.get(true)).hasSameElementsAs(asList(viktor, eva));
-        assertThat(result.get(false)).hasSameElementsAs(asList(sara));
+        assertThat(result.get(false)).hasSameElementsAs(asList(sara, jack));
     }
 
 }
