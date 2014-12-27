@@ -21,7 +21,7 @@ public class Joining {
 //		 concatedName.setLength(concatedName.toString().length() - 2);
 
 		IntStream.range(0, people.size()).forEach(i -> {
-			String name = people.get(i).getName();
+			String name = people.get(i).getFirstName();
 
 			if (i == people.size() - 1) {
 				concatedName.append(name).append(".");
@@ -39,7 +39,7 @@ public class Joining {
 	public static String namesToString(List<Person> people) {
 		//return people.stream().filter(peo -> peo.getAge()<18).map(peo -> peo.getName()).collect(Collectors.toSet());
 		
-		return people.stream().map(peo-> peo.getName()).collect(Collectors.joining(", ", "Names: ", "."));
+		return people.stream().map(peo-> peo.getFirstName()).collect(Collectors.joining(", ", "Names: ", "."));
 	}
 
 }

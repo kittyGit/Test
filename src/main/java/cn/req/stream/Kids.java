@@ -11,7 +11,7 @@ public class Kids {
     	Set<String> kidNames=new HashSet<String>();
     	people.forEach(peo->{
     		if(peo.getAge()<18){
-    		String name=peo.getName();
+    		String name=peo.getFirstName();
     		kidNames.add(name);
     		}
     	});
@@ -20,7 +20,7 @@ public class Kids {
 
     public static Set<String> getKidNames(List<Person> people) {
     	
-    	return people.stream().filter(peo -> peo.getAge()<18).map(peo -> peo.getName()).collect(Collectors.toSet());
+    	return people.stream().filter(peo -> peo.getAge()<18).map(peo -> peo.getFirstName()).collect(Collectors.toSet());
     	
     	
     }
