@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Selector By ID</title>
+<style>
+div {
+	width: 80px;
+	height: 80px;
+	float: left;
+	padding: 10px;
+	margin: 10px;
+	background-color: #eee;
+}
+</style>
+<script src="jquery.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+	
+	// id选择器
+	// 选择id=kitty的元素
+	$("#kitty").css("border","5px solid green");
+});
+</script>
+</head>
+<body>
+	<div id="kitty">
+		<p>i am kitty</p>
+	</div>
+	<div id="kitty2">
+		<p>kitty2</p>
+	</div>
+</body>
+</html>
